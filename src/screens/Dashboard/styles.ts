@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import { shade } from "polished";
+import { transform } from "typescript";
 
 export const Title = styled.h1`
   font-size: 48px;
@@ -91,4 +92,23 @@ export const Repos = styled.section`
       color: #cbcbd6;
     }
   }
+`;
+
+const load = keyframes`
+  from {
+    transform: rotate(0deg)
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+`;
+
+export const Loader = styled.div`
+  width: 30px;
+  height: 30px;
+  border-top: 3px solid #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: ${load} 1s linear infinite;
 `;
