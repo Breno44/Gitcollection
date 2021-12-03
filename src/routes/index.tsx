@@ -6,7 +6,7 @@ export function Routes() {
   return (
     <Switch>
       <Route path="/" component={Dashboard} exact />
-      <Route path="/repositories" component={Repo} />
+      <Route path="/repositories/:repository+" component={Repo} />
     </Switch>
   );
 }
